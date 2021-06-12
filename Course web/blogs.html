@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .aboutme h3{
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 30px ;
+        }
+    </style>
+</head>
+<body>
+     <!---- Navbar of the webpages----->
+   <div class="back">
+        <div class="navbar">
+            <div class="logo"> <a href="home.html"><b> S. BIKAL</b></a> </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cv.html">CV/Portfolio</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research.html">Research</a></li>
+                </ul>
+            </nav>
+   
+        </div>
+        </div>
+        <!----------------Blogs post of the webpage------------------->
+        <section>
+            <div class="blogs">
+                    <h1>Recent Blog :</h1>
+                    <h2>How Does Technology Affect Your Health? Impact Of Technology</h2>
+             <div class="blog">
+                 <img src="technology.jpg" alt="technology" id="changephoto">
+                </div>
+                <div class="para">
+                    <p>While some forms of technology may have made positive changes in the world, there is evidence for the negative effects of technology and its overuse, as well. 
+                        Social media and mobile devices may lead to psychological and physical issues, such as eyestrain and difficulty focusing on 
+                        important tasks. They may also contribute to more serious health conditions, such as depression. The overuse of technology may have 
+                        a more significant impact on developing children and teenagers.In this article, learn about the psychological and physical health
+                         effects of technology, as well as how to create healthful habits with technology and avoid overuse.<span id="dot">.........
+                     </p>
+                    
+                     <span id="morepara">
+                     <h2>Psychological effects</h2>
+                     <h4>Isolation</h4>
+                     <p>Technologies, such as social media, are designed to bring people together, yet they may have the opposite effect in some cases.Finding ways to reduce
+                          social media use, such as setting time limits for social apps, may help reduce feelings of isolation in some people.
+                    </p>
+                    <h4>Depression and anxiety</h4>
+                    <p>Their research found mixed results. People who had more positive interactions and social support on these platforms appeared to have lower levels of depression and anxiety.
+                         However, the reverse was also true. People who perceived that they had more negative social interactions online and who were more prone to social
+                          comparison experienced higher levels of depression and anxiety. So, while there does appear to be a link between social media and mental 
+                        health, a significant determining factor is the types of interactions people feel they are having on these platforms.
+                    </p>
+                    <h2>Physical health effects</h2>
+                    <h4>Eyestrain</h4>
+                    <p>Technologies, such as handheld tablets, smartphones, and computers, can hold a person’s attention for long periods. This may lead to eyestrain. 
+                        Symptoms of digital eyestrain can include blurred vision and dry eyes. Eyestrain may also lead to pains in other areas of the body, such as the head, neck, or shoulders. 
+                        Several technological factors may lead to eyestrain, such as:
+                    <ul>
+                        <li>Screen time</li>
+                        <li>Screen glare</li>
+                        <li>Screen brightness</li>
+                        <li>Viewing too close or too far away</li>
+                        <li>Poor sitting posture</li>
+                        <li>Underlying vision issues</li>
+                    </ul>
+                    </p>
+                    <h4>Poor posture</h4>
+                    <p>The way many people use mobile devices and computers may also contribute to incorrect posture. Over time, this may lead to musculoskeletal issues.
+                         Many technologies promote a “down and forward” user position, meaning the person is hunched forward and looking down at the screen. This can put an
+                          unnecessary amount of pressure on the neck and spine. A 5-year study in the journal Applied Ergonomics found an association between 
+                          texting on a mobile phone and neck or upper back pain in young adults.
+                    </p>
+                    <h4>Sleep problems</h4>
+                    <p>Using technology too close to bedtime may cause issues with sleep. This effect has to do with the fact that blue light, such as the light from cell phones, e-readers, and computers, stimulates the brain. 
+                        Authors of a 2014 study found that this blue light is enough to disturb the body’s natural circadian rhythm. This disturbance could make it harder to fall asleep or lead to a person feeling less alert the next day.
+                         To avoid the potential impact of blue light on the brain, people can stop using electronic devices that emit blue light in the hour or two before bedtime.
+                    </p>
+                    <h2>Summary</h2>
+                    <p>The recent boom in technology has changed the average American lifestyle. While technology has many positive effects, there are some possible risks.
+                         Anyone uncertain about the effects that technology has on them may want to take steps to cut back on their use of devices and screen time and re-evaluate how they feel with and without these devices.
+                        </span>
+                    </span>
+                   </p>
+                </div>
+                <button type="button" id="read" onclick="read()">Read More</button>  <!---Using onclick event handler and read() function-->
+            </div>
+        </section>
+        <hr style="margin-top: 100px;">
+        <!----------Footer of the webpages--------------->
+        <footer>
+            <div class="footer">
+                <p>&copy; copyright 2021 Portfolio.com, Inc </p>
+            </div>
+        </footer>
+
+         <!----------JavaScript of the webpages--------------->
+         <script>
+             var i=0;                //variable to asign name
+             function read() {                 // creating read() function
+                 if (!i) {                     // if we click, this function will run
+                     document.getElementById("morepara").style.display = "inline";         //Changing element through Id 
+                     document.getElementById("dot").style.display = "none";
+                     document.getElementById("read").innerHTML="Read Less";    //dynamically changing the content of the html in the site
+                     i=1;
+                 }
+                 else{
+                    document.getElementById("morepara").style.display = "none";
+                     document.getElementById("dot").style.display = "inline";
+                     document.getElementById("read").innerHTML="Read More";
+                     i=0;
+                 }
+
+             }
+         </script>
+</body>
+</html>

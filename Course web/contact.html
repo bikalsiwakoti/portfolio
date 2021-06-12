@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b555cd9b94.js" crossorigin="anonymous"></script> <!---using sontawesom for icon --->
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .aboutme h3{
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 30px ;
+        }
+
+    </style>
+</head>
+<body>
+     <!---- Navbar of the webpages----->
+   <div class="back">
+    <div class="navbar">
+        <div class="logo"> <a href="home.html"><b> S. BIKAL</b></a> </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cv.html">CV/Portfolio</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="research.html">Research</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    </div>
+     <!----------Contact page of the webpages--------------->
+     <article>
+         <div class="contact">
+           
+             <h1>Contact Us</h1>
+             <p>You can contact me if you got any problem in this coursework.</p>
+             <div class="contact-box">
+                 <div class="contact-left">
+                      <h3>Sent your message here:</h3>
+                      <div id="error_message"></div>
+                      <form id="contactForm" onsubmit="return formValidation()" >
+                          <div class="input-row">
+                            <div class="input-group">
+                                <label>Full Name:</label>
+                                <input type="text" placeholder="Bikal Siwakoti" id="name" >
+                            </div>
+                            <div class="input-group">
+                                <label>Phone Number:</label>
+                                <input type="number" placeholder="+977 9800000000" id="phone">
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address:</label>
+                                <input type="email" placeholder="abcdefgh@example.com" id="email" >
+                            </div>
+                            <div class="input-group">
+                                <label>Personal Info:</label>
+                                <input type="text" placeholder="Your Information" id="personal">
+                            </div>
+
+                          </div>
+                          <label id="message-box">Message: </label>
+                          <textarea rows="10" placeholder="Write a Message" id="message"></textarea>
+                          <button type="Submit" id="Contact-button">SEND</button>  <!---Using onclick event handler and popup() function-->
+                      </form>
+                 </div>
+                 <div class="contact-right">
+                     <h2>How Can We Help ?</h2>
+                     <h3>Reach Us</h3>
+                     <table>                 <!-----Using table attributes----->
+                         <tr>
+                             <td> Email Address:</td>
+                             <td> bikalsiwakoti21@gmail.com</td>
+                         </tr>
+                         <tr>
+                            <td> Phone Number:</td>
+                            <td> +977 9804003007</td>
+                        </tr>
+                        <tr>
+                            <td> Address:</td>
+                            <td> Itahari -4, Taltalaiya road, vetghat chowk</td>
+                        </tr>
+                        <tr>
+                            <td> Telegram Account:</td>
+                            <td> @bikalsiwakoti</td>
+                        </tr>
+                        <tr>
+                            <td> Twitter Account:</td>
+                            <td> @bikal97437811</td>
+                        </tr>
+                        <tr>
+                            <td> Telephone Number:</td>
+                            <td>+977 025587143</td>
+                        </tr>
+                      
+                     </table>
+                     <div class="logo-3">
+                        <a href="https://www.facebook.com/bikal.siwakoti/" target="_blank"> <span class="logo-2" > <i class="fab fa-facebook"></i></span></a>
+                        <a href="https://twitter.com/bikal97437811" target="_blank"><span class="logo-2" ><i class="fab fa-twitter-square"></i></span></a>
+                        <a href="https://telegram.org/@bikalsiwakoti" target="_blank"><span class="logo-2" ><i class="fab fa-telegram"></i></span></a>
+                      </div>
+
+                 </div>
+             </div>
+         </div>
+     </article>
+     <hr style="margin-top: 100px;">
+    <!----------Footer of the webpages--------------->
+    <footer>
+        <div class="footer">
+            <p>&copy; copyright 2021 Portfolio.com, Inc </p>
+        </div>
+    </footer>
+    <!----------JavaScript of the webpages--------------->
+            <script>
+
+ function formValidation(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var personal = document.getElementById("personal").value;
+        var message = document.getElementById("message").value;
+        var error_message = document.getElementById("error_message");
+        
+        error_message.style.padding = "10px";
+        
+        var text;
+        if(name=="" || phone =="" ||email =="" ||personal ==""){
+          text = "Your form is not valid";
+          error_message.innerHTML = text;
+          return false;
+        }
+
+
+        if(name.length < 4){
+          text = "Please Enter valid name";
+          error_message.innerHTML = text;
+          return false;
+        }
+    
+        if( phone.length < 7){
+          text = "Please Enter valid Phone Number";
+          error_message.innerHTML = text;
+          return false;
+        }
+
+        if(email.indexOf("@") == -1 || email.length < 6){
+          text = "Please Enter valid Email";
+          error_message.innerHTML = text;
+          return false;
+        }
+        if(message.length <= 1){
+          text = "Please Enter More something in messagebox";
+          error_message.innerHTML = text;
+          return false;
+        }
+
+        alert("Form will be submitted");
+        return true;
+      }
+
+            </script>
+</body>
+</html>
